@@ -43,8 +43,8 @@ export class EditComponent implements OnInit {
   	this._topicService.update(this.token,id,this.topic).subscribe(
   		response => {
   			if(response.topicUpdated){
-  				this.status = 'error';
-  				this.topic = response.topic;
+  				this.status = 'success';
+          this.topic = response.topic;
   				console.log('exito');
   			}
   			else{
