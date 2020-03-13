@@ -31,10 +31,11 @@ export class TopicService{
     return this._http.get(this.url+'user-topics/'+userId,{headers:headers});
 
 	}
-
-	getTopic(idTopic):Observable<any>{
-		return this._http.get(this.url+'topic/'+idTopic);
-	}
+    
+    //Duplicado
+	//getTopic(idTopic):Observable<any>{
+	//	return this._http.get(this.url+'topic/'+idTopic);
+	//}
 
 	update(token, id, topic):Observable<any>{
 		let params = JSON.stringify(topic);
@@ -53,6 +54,9 @@ export class TopicService{
 
 		return this._http.get(this.url+'topics/'+page);
 	
+	}
+	getTopic(id):Observable<any>{
+		return this._http.get(this.url+'topic/'+id);
 	}
 
 }
