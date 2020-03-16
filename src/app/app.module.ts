@@ -7,6 +7,7 @@ import { AngularFileUploaderModule } from "angular-file-uploader";
 import { MomentModule } from 'angular2-moment';
 import { NgxHighlightJsModule } from '@nowzoo/ngx-highlight-js';
 import { UserGuard } from './services/user.guard';
+import { NoIdentityGuard } from './services/no.identity.guard';
 
 import { PanelModule } from './panel/panel.module';
 
@@ -17,6 +18,9 @@ import { HomeComponent } from './components/home/home.component';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { TopicsComponent } from './components/topics/topics.component';
 import { TopicDetailComponent } from './components/topic-detail/topic-detail.component';
+import { UsersComponent } from './components/users/users.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 @NgModule({
@@ -28,6 +32,9 @@ import { TopicDetailComponent } from './components/topic-detail/topic-detail.com
     UserEditComponent,
     TopicsComponent,
     TopicDetailComponent,
+    UsersComponent,
+    ProfileComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +48,8 @@ import { TopicDetailComponent } from './components/topic-detail/topic-detail.com
   ],
   providers: [
   appRoutingProviders,
-  UserGuard
+  UserGuard,
+  NoIdentityGuard
   ],
   bootstrap: [AppComponent]
 })

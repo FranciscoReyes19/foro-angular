@@ -59,4 +59,8 @@ export class TopicService{
 		return this._http.get(this.url+'topic/'+id);
 	}
 
+	search(searchString):Observable<any>{
+    	return this._http.get(this.url+'search/'+searchString);
+  	}
+
 }
