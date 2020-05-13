@@ -20,7 +20,7 @@ export class TopicService{
 	addTopic(token, topic): Observable<any>{
 		let params = JSON.stringify(topic);
 		let headers = new HttpHeaders().set('Content-Type','application/json')
-									   .set('Authorization',token);
+									   .set('Authorization',token.toString());
 
 		return this._http.post(this.url+'topic',params, {headers:headers});
 	}
